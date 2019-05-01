@@ -1821,7 +1821,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #bfffff;
+  background: #ffffcd;
 }
 .feed-link,
 .chat {
@@ -2761,6 +2761,19 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+body {
+  background-image: url("/images/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 30% 0%;
+}
+.main-inner {
+  margin-top: 60px;
+  padding: 60px 60px 60px 60px;
+  background: #fff;
+  opacity: 0.8;
+  min-height: 500px;
 }
 .post {
   margin-top: 60px;
