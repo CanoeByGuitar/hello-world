@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[连续整数的最小交换排序问题]]></title>
+    <url>%2F2019%2F07%2F15%2F%E8%BF%9E%E7%BB%AD%E6%95%B4%E6%95%B0%E7%9A%84%E6%9C%80%E5%B0%8F%E4%BA%A4%E6%8D%A2%E6%8E%92%E5%BA%8F%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[NJU的CS上机指定使用C++，最近抱起《C++Primer》开始肯，同时找到了一个不错的OJ平台——hackerrank，这题是里面碰到的第一个有点困难的题。 原题链接对于输入的一个数组，这个数组纬度为n，且仅含整数 1～$n$ 各一次,例如$$arr = [5,4,3,2,1]$$要求仅使用多次swap方法调换位置，使得该数组递增，即$$arr = [1,2,3,4,5]$$最终要求输出最小的swap次数。 最开始的想法是这样的： $[5,4,3,2,1]$1st: swap(0,4) –&gt; $[1,4,3,2,5]$2nd: swap(1,3) –&gt; $[1,2,3,4,5]$ 即每次从索引为0的地方查起，若发现索引$i$对应的值不是$i+1$，就将该数字与它应在的正确位置想交换；然后开始新一轮的从搜索(从索引0开始)，直到整个数组递增。用c++写出来：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960#include &lt;iostream&gt;#include &lt;vector&gt;using namespace std;int isCorrect(vector&lt;int&gt; arr);int minimumSwaps(vector&lt;int&gt; arr);int main()&#123; int n; cin &gt;&gt; n; vector&lt;int&gt; a; int temp; int i = 0; while (i &lt; n) &#123; cin &gt;&gt; temp; a.push_back(temp); i++; &#125; cout &lt;&lt; minimumSwaps(a);&#125;int minimumSwaps(vector&lt;int&gt; arr)&#123; int count = 0; while (isCorrect(arr) != 1) &#123; int pos; int val; for (int i = 0; i &lt; arr.size(); i++) &#123; if (arr[i] != i + 1) &#123; pos = i; val = arr[i]; break; &#125; &#125; int temp; temp = val; arr[pos] = arr[val - 1]; arr[val - 1] = temp; count++; &#125; return count;&#125;int isCorrect(vector&lt;int&gt; arr)&#123; int flg = 1; for (int i = 0; i &lt; arr.size(); i++) &#123; if (arr[i] != i + 1) &#123; flg = 0; &#125; &#125; return flg;&#125; 信心慢慢提交，发现超时，检查了一下oj的输入数据，超时错误从数据量达到50000开始出现，然后想到是时间复杂度太高的问题，优化过后的代码如下1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859#include &lt;iostream&gt;#include &lt;vector&gt;using namespace std;int num = 0;vector&lt;int&gt; solve(vector&lt;int&gt; arr, int i);int minimumSwaps(vector&lt;int&gt; arr);int main()&#123; int n; cin &gt;&gt; n; vector&lt;int&gt; a; int temp; int i = 0; while (i &lt; n) &#123; cin &gt;&gt; temp; a.push_back(temp); i++; &#125; cout &lt;&lt; minimumSwaps(a);&#125;int minimumSwaps(vector&lt;int&gt; arr)&#123; int i = 0; while (i &lt; arr.size()) &#123; if (arr[i] != i + 1) &#123; arr = solve(arr, i); &#125; else &#123; int j = 0; for (j = i + 1; j &lt; arr.size(); j++) &#123; if (arr[j] != j + 1) break; &#125; i = j; if(i != arr.size()) arr = solve(arr, i); &#125; &#125; return num;&#125;vector&lt;int&gt; solve(vector&lt;int&gt; arr, int i)&#123; int pos = i; int val = arr[i]; int temp; temp = val; arr[pos] = arr[val - 1]; arr[val - 1] = temp; num++; return arr;&#125; Submit Accepted呼～嘿嘿]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+</search>
