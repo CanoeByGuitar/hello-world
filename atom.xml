@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-14T17:09:48.625Z</updated>
+  <updated>2019-09-17T16:03:18.833Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GPU版tensorflow环境配置</title>
+    <link href="http://yoursite.com/2019/09/17/GPU%E7%89%88tensorflow%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>http://yoursite.com/2019/09/17/GPU版tensorflow环境配置/</id>
+    <published>2019-09-17T15:27:18.000Z</published>
+    <updated>2019-09-17T16:03:18.833Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="版本匹配问题"><a href="#版本匹配问题" class="headerlink" title="版本匹配问题"></a>版本匹配问题</h2><table><thead><tr><th style="text-align:center">软件</th><th style="text-align:center">版本</th></tr></thead><tbody><tr><td style="text-align:center">tensorflow-gpu</td><td style="text-align:center">1.14.0</td></tr><tr><td style="text-align:center">cuda</td><td style="text-align:center">10.0</td></tr><tr><td style="text-align:center">cuDNN</td><td style="text-align:center">7.4</td></tr><tr><td style="text-align:center">显卡驱动</td><td style="text-align:center">418.74</td></tr><tr><td style="text-align:center">OS</td><td style="text-align:center">Ubuntu 18.04</td></tr><tr><td style="text-align:center">Python</td><td style="text-align:center">python 3.6</td></tr></tbody></table><h2 id="一些可能遇到的问题"><a href="#一些可能遇到的问题" class="headerlink" title="一些可能遇到的问题"></a>一些可能遇到的问题</h2><p><strong>写在最前面:</strong></p><ul><li><strong>碰到报错首先读log，根据原因找解决方案</strong></li><li><strong>多利用搜索引擎</strong></li><li><strong>安装顺序：操作系统-python-显卡驱动-cuda-cuDNN-tensorflow</strong></li></ul><h3 id="GCC编译器版本可能引起的问题"><a href="#GCC编译器版本可能引起的问题" class="headerlink" title="GCC编译器版本可能引起的问题"></a>GCC编译器版本可能引起的问题</h3><p>这里要注意的是，使用tensorflow进行training的时候GCC版本要为4.8，而在安装显卡驱动的时候，GCC版本要7.0以上，所以要注意GCC降级的时间。</p><h3 id="cuda、cuDNN下载速度"><a href="#cuda、cuDNN下载速度" class="headerlink" title="cuda、cuDNN下载速度"></a>cuda、cuDNN下载速度</h3><p>个人感觉Ubuntu网卡驱动没有自己的笔记本上的好，导致速度很慢，所以我选择在macOS里下载好安装包再通过u盘或者内网ftp协议传输过去；另外浏览器下载慢可以尝试复制链接迅雷下载</p><h3 id="cuda安装过程"><a href="#cuda安装过程" class="headerlink" title="cuda安装过程"></a>cuda安装过程</h3><p>建议不勾选安装显卡驱动，而是自己手动安装</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;版本匹配问题&quot;&gt;&lt;a href=&quot;#版本匹配问题&quot; class=&quot;headerlink&quot; title=&quot;版本匹配问题&quot;&gt;&lt;/a&gt;版本匹配问题&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;软件&lt;/th
+      
+    
+    </summary>
+    
+      <category term="深度学习" scheme="http://yoursite.com/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="tensorflow" scheme="http://yoursite.com/tags/tensorflow/"/>
+    
+  </entry>
   
   <entry>
     <title>连续整数的最小交换排序问题</title>
