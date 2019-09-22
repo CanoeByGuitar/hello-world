@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-22T11:38:24.317Z</updated>
+  <updated>2019-09-22T11:43:25.510Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,16 +21,13 @@
     <link href="http://yoursite.com/2019/09/22/Shockhosting%E2%80%94%E2%80%94%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BC%97%E7%9A%84VPS%E8%BF%90%E8%90%A5%E5%95%86/"/>
     <id>http://yoursite.com/2019/09/22/Shockhosting——一个小众的VPS运营商/</id>
     <published>2019-09-22T08:12:45.000Z</published>
-    <updated>2019-09-22T11:38:24.317Z</updated>
+    <updated>2019-09-22T11:43:25.510Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h2><p><a href="www.shockhosting.net">Shockhosting官网</a><br>不用挂梯子就可以进，但注册的时候如果不挂似乎刷不出验证码，临时有需要可以联系我啦（：<br>购买后页面<br>！<a href="Shockhosting——一个小众的VPS运营商/1.jpg"></a></p><h2 id="优惠码"><a href="#优惠码" class="headerlink" title="优惠码"></a>优惠码</h2><p>更新时间：2019.9.22</p><font color="red">LET30</font><h2 id="下载ssr服务器端时报错"><a href="#下载ssr服务器端时报错" class="headerlink" title="下载ssr服务器端时报错"></a>下载ssr服务器端时报错</h2><p>wget下载ssr安装时，报根目录容量不够，检查了一下硬盘容量，发现文件系统中 <code>/</code>下只有2个g，可我购买的服务器硬盘有50个g呀。<br>检查了一下磁盘空间确实是20个g，只不过文件系统只占用了22g，剩余的磁盘都空闲。<br>使用以下命令扩大文件系统空间。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">resize2fs [空闲磁盘名称]</span><br></pre></td></tr></table></figure></p><p>！<a href="Shockhosting——一个小众的VPS运营商/2.jpg"></a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h2><p><a href="www.shockhosting.net">Shockhosting官网</a><br>不用挂梯子就可以进，但注册的时候如果不挂似乎刷不出验证码，临时有需要可以联系我啦（：<br>购买后页面<br><img src="/2019/09/22/Shockhosting——一个小众的VPS运营商/2.png" alt><br><a id="more"></a></p><h2 id="优惠码"><a href="#优惠码" class="headerlink" title="优惠码"></a>优惠码</h2><p>更新时间：2019.9.22</p><p><font color="red">LET30</font> 七折优惠码</p><h2 id="下载ssr服务器端时报错"><a href="#下载ssr服务器端时报错" class="headerlink" title="下载ssr服务器端时报错"></a>下载ssr服务器端时报错</h2><p>wget下载ssr安装时，报根目录容量不够，检查了一下硬盘容量，发现文件系统中 <code>/</code>下只有2个g，可我购买的服务器硬盘有50个g呀。<br>检查了一下磁盘空间确实是20个g，只不过文件系统只占用了22g，剩余的磁盘都空闲。<br>使用以下命令扩大文件系统空间。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">resize2fs [空闲磁盘名称]</span><br></pre></td></tr></table></figure></p><p><img src="/2019/09/22/Shockhosting——一个小众的VPS运营商/1.jpg" alt></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h2 id=&quot;网址&quot;&gt;&lt;a href=&quot;#网址&quot; class=&quot;headerlink&quot; title=&quot;网址&quot;&gt;&lt;/a&gt;网址&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;www.shockhosting.net&quot;&gt;Shockhosting官网&lt;/a&gt;&lt;br&gt;不用挂梯子就可以进，但注册的时候如
-      
+      &lt;h2 id=&quot;网址&quot;&gt;&lt;a href=&quot;#网址&quot; class=&quot;headerlink&quot; title=&quot;网址&quot;&gt;&lt;/a&gt;网址&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;www.shockhosting.net&quot;&gt;Shockhosting官网&lt;/a&gt;&lt;br&gt;不用挂梯子就可以进，但注册的时候如果不挂似乎刷不出验证码，临时有需要可以联系我啦（：&lt;br&gt;购买后页面&lt;br&gt;&lt;img src=&quot;/2019/09/22/Shockhosting——一个小众的VPS运营商/2.png&quot; alt&gt;&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -62,19 +59,47 @@
     <link href="http://yoursite.com/2019/09/17/GPU%E7%89%88tensorflow%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
     <id>http://yoursite.com/2019/09/17/GPU版tensorflow环境配置/</id>
     <published>2019-09-17T15:27:18.000Z</published>
-    <updated>2019-09-17T16:05:24.850Z</updated>
+    <updated>2019-09-22T11:41:58.152Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="版本匹配问题"><a href="#版本匹配问题" class="headerlink" title="版本匹配问题"></a>版本匹配问题</h2><table><thead><tr><th style="text-align:center">软件</th><th style="text-align:center">版本</th></tr></thead><tbody><tr><td style="text-align:center">tensorflow-gpu</td><td style="text-align:center">1.14.0</td></tr><tr><td style="text-align:center">cuda</td><td style="text-align:center">10.0</td></tr><tr><td style="text-align:center">cuDNN</td><td style="text-align:center">7.4</td></tr><tr><td style="text-align:center">显卡驱动</td><td style="text-align:center">418.74</td></tr><tr><td style="text-align:center">OS</td><td style="text-align:center">Ubuntu 18.04</td></tr><tr><td style="text-align:center">Python</td><td style="text-align:center">python 3.6</td></tr></tbody></table><p>亲测，按照这版本，显卡风扇已经呼啦啦的转起来了。</p><h2 id="一些可能遇到的问题"><a href="#一些可能遇到的问题" class="headerlink" title="一些可能遇到的问题"></a>一些可能遇到的问题</h2><p><strong>写在最前面:</strong></p><ul><li><strong>碰到报错首先读log，根据原因找解决方案</strong></li><li><strong>多利用搜索引擎</strong></li><li><strong>安装顺序：操作系统-python-显卡驱动-cuda-cuDNN-tensorflow</strong></li></ul><h3 id="GCC编译器版本可能引起的问题"><a href="#GCC编译器版本可能引起的问题" class="headerlink" title="GCC编译器版本可能引起的问题"></a>GCC编译器版本可能引起的问题</h3><p>这里要注意的是，使用tensorflow进行training的时候GCC版本要为4.8，而在安装显卡驱动的时候，GCC版本要7.0以上，所以要注意GCC降级的时间。</p><h3 id="cuda、cuDNN下载速度"><a href="#cuda、cuDNN下载速度" class="headerlink" title="cuda、cuDNN下载速度"></a>cuda、cuDNN下载速度</h3><p>个人感觉Ubuntu网卡驱动没有自己的笔记本上的好，导致速度很慢，所以我选择在macOS里下载好安装包再通过u盘或者内网ftp协议传输过去；另外浏览器下载慢可以尝试复制链接迅雷下载。</p><h3 id="cuda安装过程"><a href="#cuda安装过程" class="headerlink" title="cuda安装过程"></a>cuda安装过程</h3><p>建议不勾选安装显卡驱动，而是自己手动安装。</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="版本匹配问题"><a href="#版本匹配问题" class="headerlink" title="版本匹配问题"></a>版本匹配问题</h2><table><thead><tr><th style="text-align:center">软件</th><th style="text-align:center">版本</th></tr></thead><tbody><tr><td style="text-align:center">tensorflow-gpu</td><td style="text-align:center">1.14.0</td></tr><tr><td style="text-align:center">cuda</td><td style="text-align:center">10.0</td></tr><tr><td style="text-align:center">cuDNN</td><td style="text-align:center">7.4</td></tr><tr><td style="text-align:center">显卡驱动</td><td style="text-align:center">418.74</td></tr><tr><td style="text-align:center">OS</td><td style="text-align:center">Ubuntu 18.04</td></tr><tr><td style="text-align:center">Python</td><td style="text-align:center">python 3.6</td></tr></tbody></table><p>亲测，按照这版本，显卡风扇已经呼啦啦的转起来了。<br><a id="more"></a></p><h2 id="一些可能遇到的问题"><a href="#一些可能遇到的问题" class="headerlink" title="一些可能遇到的问题"></a>一些可能遇到的问题</h2><p><strong>写在最前面:</strong></p><ul><li><strong>碰到报错首先读log，根据原因找解决方案</strong></li><li><strong>多利用搜索引擎</strong></li><li><strong>安装顺序：操作系统-python-显卡驱动-cuda-cuDNN-tensorflow</strong></li></ul><h3 id="GCC编译器版本可能引起的问题"><a href="#GCC编译器版本可能引起的问题" class="headerlink" title="GCC编译器版本可能引起的问题"></a>GCC编译器版本可能引起的问题</h3><p>这里要注意的是，使用tensorflow进行training的时候GCC版本要为4.8，而在安装显卡驱动的时候，GCC版本要7.0以上，所以要注意GCC降级的时间。</p><h3 id="cuda、cuDNN下载速度"><a href="#cuda、cuDNN下载速度" class="headerlink" title="cuda、cuDNN下载速度"></a>cuda、cuDNN下载速度</h3><p>个人感觉Ubuntu网卡驱动没有自己的笔记本上的好，导致速度很慢，所以我选择在macOS里下载好安装包再通过u盘或者内网ftp协议传输过去；另外浏览器下载慢可以尝试复制链接迅雷下载。</p><h3 id="cuda安装过程"><a href="#cuda安装过程" class="headerlink" title="cuda安装过程"></a>cuda安装过程</h3><p>建议不勾选安装显卡驱动，而是自己手动安装。</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h2 id=&quot;版本匹配问题&quot;&gt;&lt;a href=&quot;#版本匹配问题&quot; class=&quot;headerlink&quot; title=&quot;版本匹配问题&quot;&gt;&lt;/a&gt;版本匹配问题&lt;/h2&gt;&lt;table&gt;
+      &lt;h2 id=&quot;版本匹配问题&quot;&gt;&lt;a href=&quot;#版本匹配问题&quot; class=&quot;headerlink&quot; title=&quot;版本匹配问题&quot;&gt;&lt;/a&gt;版本匹配问题&lt;/h2&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
-&lt;th style=&quot;text-align:center&quot;&gt;软件&lt;/th
-      
+&lt;th style=&quot;text-align:center&quot;&gt;软件&lt;/th&gt;
+&lt;th style=&quot;text-align:center&quot;&gt;版本&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;tensorflow-gpu&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;1.14.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;cuda&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;10.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;cuDNN&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;7.4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;显卡驱动&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;418.74&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;OS&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Ubuntu 18.04&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;Python&lt;/td&gt;
+&lt;td style=&quot;text-align:center&quot;&gt;python 3.6&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;亲测，按照这版本，显卡风扇已经呼啦啦的转起来了。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
