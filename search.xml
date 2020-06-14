@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[PAT1005]]></title>
+    <url>%2F2020%2F06%2F14%2FPAT1005%2F</url>
+    <content type="text"><![CDATA[123456789101112131415161718192021222324252627282930313233#include &lt;iostream&gt;#include &lt;string&gt;using namespace std;int main()&#123; string input; cin &gt;&gt; input;//cin直接传给string类型，注意这是STL里的string，不是cstring int sum = 0; for(int i = 0;i &lt; input.size(); i++)&#123; sum += input[i] - '0'; &#125; string hash[10]; hash[0] = "zero"; hash[1] = "one"; hash[2] = "two"; hash[3] = "three"; hash[4] = "four"; hash[5] = "five"; hash[6] = "six"; hash[7] = "seven"; hash[8] = "eight"; hash[9] = "nine"; char output[1000]; int num = sprintf(output,"%d",sum); /* sprintf函数，可以手写，类似于进制转换，将int型转换为数字字符串，返回值为转换成的字符串的大小（不包括结尾\0） **/ for(int i = 0; i &lt; num; i++)&#123; if(i == 0) cout &lt;&lt; hash[output[i] - '0']; else cout&lt;&lt;" "&lt;&lt; hash[output[i] - '0']; &#125;&#125;]]></content>
+      <categories>
+        <category>PAT</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[PAT1004]]></title>
+    <url>%2F2020%2F06%2F14%2FPAT1004%2F</url>
+    <content type="text"><![CDATA[1234567891011121314151617181920212223242526272829303132333435363738394041424344454647#include &lt;iostream&gt;#include &lt;vector&gt;#include &lt;queue&gt;using namespace std;const int N = 105;vector&lt;int&gt; Node[N];int level[N] = &#123;0&#125;;int leaf[N] = &#123;0&#125;;int max_level = 0;void BFS()&#123; queue&lt;int&gt; Q; Q.push(1); while(!Q.empty())&#123; int front = Q.front(); Q.pop(); max_level = max(max_level,level[front]); if(Node[front].size() == 0)&#123; leaf[level[front]]++; &#125; for(int i = 0; i &lt; Node[front].size(); i++)&#123; level[Node[front][i]] = level[front] + 1; Q.push(Node[front][i]); &#125; &#125;&#125;int main()&#123; int n,m; cin &gt;&gt; n &gt;&gt; m; for(int i = 0; i &lt; m; i++)&#123; int parent, k, child; cin &gt;&gt; parent &gt;&gt; k; for(int j =0; j &lt; k;j++)&#123; cin &gt;&gt; child; Node[parent].push_back(child); &#125; &#125; BFS(); for(int i = 0; i &lt;= max_level; i++)&#123; if(i == 0) cout &lt;&lt; leaf[i]; else cout &lt;&lt; " " &lt;&lt; leaf[i]; &#125;&#125;]]></content>
+      <categories>
+        <category>PAT</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[PAT1003]]></title>
+    <url>%2F2020%2F06%2F14%2FPAT1003%2F</url>
+    <content type="text"><![CDATA[12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879#include &lt;iostream&gt;#include &lt;vector&gt;#include &lt;algorithm&gt;#include &lt;cstring&gt;using namespace std;struct Node&#123; int v; int dist;&#125;;const int INF = 10000000;int N,M,C1,C2;vector&lt;Node&gt; Adj[510];int dot_weight[510];int d[510];int W[510];int cnt[510];bool isVisit[510] = &#123;false&#125;;void Dijkstra(int s);int main()&#123; fill(d,d+510,INF);//两种不同方法效果一样 //memset(d,INF,sizeof(d)); fill(W,W+510,0); fill(cnt,cnt+510,1); fill(dot_weight,dot_weight+510,0); cin &gt;&gt; N &gt;&gt; M &gt;&gt; C1 &gt;&gt; C2; for(int i =0;i &lt; N ;i++)&#123; cin &gt;&gt; dot_weight[i]; &#125; for(int i = 0;i &lt; M;i++)&#123; int a, b, c; cin &gt;&gt; a &gt;&gt; b &gt;&gt; c; Node node1, node2; node1.v = a; node2.v = b; node1.dist = node2.dist = c; Adj[a].push_back(node2); Adj[b].push_back(node1); &#125; Dijkstra(C1); cout &lt;&lt; cnt[C2] &lt;&lt;" "&lt;&lt; W[C2];&#125;void Dijkstra(int s)&#123; for (int i = 0 ; i &lt; 510; ++i) &#123; if(i==s)&#123; cnt[i] = 1; W[i] = dot_weight[s]; &#125; &#125; d[s] = 0; for(int i=0;i &lt; N;i++)&#123; int u = -1; int MIN = INF; for(int j=0; j &lt; N; j++)&#123; if(isVisit[j]==false &amp;&amp; d[j] &lt; MIN)&#123; u = j; MIN = d[j]; &#125; &#125; isVisit[u] = true; for(int j = 0; j &lt; Adj[u].size(); j++)&#123; int v = Adj[u][j].v; if(isVisit[v]==false &amp;&amp; d[u]+ Adj[u][j].dist &lt; d[v])&#123; d[v] = d[u]+ Adj[u][j].dist; cnt[v] = cnt[u]; W[v] = W[u] + dot_weight[v]; &#125;else if(isVisit[v]==false &amp;&amp; d[u]+ Adj[u][j].dist == d[v])&#123; cnt[v] = cnt[u] + cnt[v]; if(W[v] &lt; W[u] + dot_weight[v])&#123; W[v] = W[u] + dot_weight[v]; &#125; &#125; &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>PAT</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[PAT1002]]></title>
+    <url>%2F2020%2F06%2F14%2FPAT1002%2F</url>
+    <content type="text"><![CDATA[1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859#include &lt;cstdio&gt;#include &lt;iostream&gt;using namespace std;typedef struct Poly&#123; int K; int exp[1005]; double coef[1005];&#125;Poly;int main()&#123; Poly p1,p2; for(int i = 0;i &lt; 1005;i++)&#123; p1.exp[i] = 0; p2.exp[i] = 0; p1.coef[i] = 0; p1.coef[i] = 0; &#125; cin &gt;&gt; p1.K; for(int i = 0;i &lt; p1.K;i++)&#123; int temp; cin &gt;&gt; temp; p1.exp[temp] = 1; cin &gt;&gt; p1.coef[temp]; &#125; cin &gt;&gt; p2.K; for(int i = 0;i &lt; p2.K;i++)&#123; int temp; cin &gt;&gt; temp; p2.exp[temp] = 1; cin &gt;&gt; p2.coef[temp]; &#125; Poly p3; int num = 0; for(int i = 0;i &lt; 1005;i++)&#123; if(p1.exp[i]==1||p2.exp[i]==1)&#123; num++; p3.exp[i] = 1; p3.coef[i] = p1.coef[i] + p2.coef[i]; if(p3.coef[i]==0)&#123;//多项式相加系数为0的情况 p3.exp[i] = 0; num--; &#125; &#125; &#125; if(num==0) cout &lt;&lt;"0";//如果输出一项没有 注意0后面不要有空格 else cout &lt;&lt; num &lt;&lt; " "; int cnt = 0; for(int i = 1004;i &gt;= 0;i--)&#123; if(p3.exp[i] == 1)&#123; cnt++; cout &lt;&lt; i &lt;&lt; " "; printf("%.1lf",p3.coef[i]); if(cnt &lt; num) cout &lt;&lt; " ";//去尾空格 &#125; &#125;&#125;]]></content>
+      <categories>
+        <category>PAT</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[PAT1001]]></title>
+    <url>%2F2020%2F06%2F14%2FPAT1001%2F</url>
+    <content type="text"><![CDATA[1234567891011121314151617181920212223242526272829303132333435#include &lt;cstdio&gt;#include &lt;iostream&gt;#include &lt;vector&gt;#include &lt;cmath&gt;using namespace std;int main()&#123; int a; int b; cin &gt;&gt; a &gt;&gt; b; int c = a + b; if(c &lt; 0) &#123; cout &lt;&lt; "-"; c = -c; &#125; vector&lt;int&gt; vec; int digit = 0; int temp = c; while(temp&gt;=1000)&#123;//计算能除多少个1000 temp = temp/1000; digit += 1; &#125; while(digit &gt;= 0)&#123; int t = c/pow(1000,digit); vec.push_back(t);//商入数组 c = c - t * pow(1000,digit);//余数代替 digit--; &#125; for(int i = 0;i &lt; vec.size();i++)&#123; if(i !=0) printf("%03d",vec[i]); else cout &lt;&lt; vec[i]; if(i != vec.size()-1) cout&lt;&lt;","; &#125;&#125;]]></content>
+      <categories>
+        <category>PAT</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Shockhosting——一个小众的VPS运营商]]></title>
     <url>%2F2019%2F09%2F22%2FShockhosting%E2%80%94%E2%80%94%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BC%97%E7%9A%84VPS%E8%BF%90%E8%90%A5%E5%95%86%2F</url>
     <content type="text"><![CDATA[网址Shockhosting官网不用挂梯子就可以进，但注册的时候如果不挂似乎刷不出验证码，临时有需要可以联系我啦（：购买后页面 优惠码更新时间：2019.9.22 LET30 七折优惠码 下载ssr服务器端时报错wget下载ssr安装时，报根目录容量不够，检查了一下硬盘容量，发现文件系统中 /下只有2个g，可我购买的服务器硬盘有50个g呀。检查了一下磁盘空间确实是20个g，只不过文件系统只占用了22g，剩余的磁盘都空闲。使用以下命令扩大文件系统空间。1resize2fs [空闲磁盘名称]]]></content>
